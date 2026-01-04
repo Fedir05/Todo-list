@@ -1,9 +1,78 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="uk">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>To-Do List</title>
-  <link rel="stylesheet" href="./styles.css" />
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="item-1">
+        <h1 class="title">TO-DO Lists</h1>
+
+        <div class="new-list">
+          <h2 class="subtitle">Lists</h2>
+
+          <form id="add-list-form">
+            <input
+              type="text"
+              id="new-list-name"
+              placeholder="New List Name"
+              autocomplete="off"
+            />
+
+            <button class="add-btn" id="add-list-btn" type="submit">Add</button>
+          </form>
+        </div>
+
+        <div class="no-list">
+          <p class="description">There is no list yet.</p>
+        </div>
+
+        <button class="delete-btn" id="delete-list-btn" type="button">
+          Delete Selected List
+        </button>
+      </div>
+
+      <div class="item-2">
+        <div class="new-task">
+          <h2 class="subtitle">No list selected</h2>
+
+          <form id="new-task-form">
+            <input
+              type="text"
+              id="new-task"
+              placeholder="New Task"
+              autocomplete="off"
+            />
+
+            <button class="add-btn" id="add-task-btn" type="submit">
+              Add Task
+            </button>
+          </form>
+        </div>
+
+        <div class="filters">
+          <button type="button" class="filter-btn active" data-filter="all">
+            All
+          </button>
+
+          <button type="button" class="filter-btn" data-filter="active">
+            Active
+          </button>
+
+          <button type="button" class="filter-btn" data-filter="done">
+            Done
+          </button>
+        </div>
+      </div>
+
+      <div class="footer">
+        <span id="left-count">0 left</span>
+
+        <button id="clear-completed-btn" class="secondary" type="button" disabled> Clear completed </button>
+      </div>
+    </div>
+  </body>
 </html>
